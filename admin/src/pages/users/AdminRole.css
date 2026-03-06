@@ -1,0 +1,171 @@
+/* Admin Role page */
+.ar-page {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ar-heading {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--admin-text);
+}
+
+/* Two-column layout */
+.ar-grid {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+@media (max-width: 900px) {
+    .ar-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Card inner overrides */
+.ar-card {
+    padding: 20px;
+}
+
+.ar-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.ar-card-title {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--admin-text);
+}
+
+/* Circular avatar */
+.ar-avatar-wrap {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.ar-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Social linked buttons */
+.ar-social-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 10px;
+    border: 1px solid var(--admin-border);
+    border-radius: 6px;
+    background: var(--admin-bg);
+    cursor: pointer;
+    font-size: 0.72rem;
+    transition: border-color var(--dur-fast);
+}
+
+.ar-social-btn:hover {
+    border-color: var(--green-400);
+}
+
+.ar-social-add-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 14px;
+    border: 1px solid var(--admin-border);
+    border-radius: 20px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--admin-text);
+    transition: border-color var(--dur-fast);
+}
+
+.ar-social-add-btn:hover {
+    border-color: var(--green-400);
+}
+
+/* Save change full-width button */
+.ar-save-btn {
+    width: 100%;
+    padding: 12px;
+    background: var(--green-600);
+    color: #fff;
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background var(--dur-fast);
+    margin-top: 4px;
+}
+
+.ar-save-btn:hover:not(:disabled) {
+    background: var(--green-700);
+}
+
+.ar-save-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Edit button */
+.ar-edit-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 14px;
+    border: 1px solid var(--admin-border);
+    border-radius: 6px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--admin-text);
+    transition: border-color var(--dur-fast);
+}
+
+.ar-edit-btn:hover {
+    border-color: var(--green-500);
+    color: var(--green-600);
+}
+
+/* Profile update 2-col form grid */
+.ar-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.ar-full {
+    grid-column: 1 / -1;
+}
+
+/* Green pill button reuse */
+.btn-green-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--green-600);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 7px 16px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-green-pill:hover {
+    background: var(--green-700);
+}

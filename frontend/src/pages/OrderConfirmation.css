@@ -1,0 +1,258 @@
+/* Order Confirmation Page */
+.oc-page {
+    background: #f9fafb;
+    min-height: 100vh;
+}
+
+.oc-main {
+    padding: 3rem 0 5rem;
+}
+
+.oc-container {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.oc-card {
+    background: #fff;
+    border-radius: 24px;
+    border: 1px solid #e5e7eb;
+    overflow: hidden;
+}
+
+/* Header */
+.oc-header {
+    text-align: center;
+    padding: 3rem 2rem 2rem;
+    background: linear-gradient(135deg, #f0fdf4, #ecfdf5);
+    border-bottom: 1px solid #d1fae5;
+}
+
+.oc-header h1 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #111;
+    margin: 1rem 0 0.4rem;
+}
+
+.oc-header p {
+    font-size: 1rem;
+    color: #6b7280;
+    margin: 0;
+}
+
+/* Order ID box */
+.oc-id-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 1.25rem 2rem;
+    background: #f9fafb;
+    border-bottom: 1px solid #f0f0f0;
+    text-align: center;
+}
+
+.oc-id-box strong {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #111;
+}
+
+.oc-label {
+    font-size: 0.82rem;
+    color: #9ca3af;
+}
+
+/* Sections */
+.oc-section {
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.oc-section h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #111;
+    margin: 0 0 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+/* Items */
+.oc-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.oc-item-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #f9fafb;
+    gap: 1rem;
+}
+
+.oc-item-row:last-child {
+    border-bottom: none;
+}
+
+.oc-item-name {
+    font-weight: 600;
+    font-size: 0.92rem;
+    color: #111;
+    margin: 0;
+}
+
+.oc-item-meta {
+    font-size: 0.8rem;
+    color: #9ca3af;
+    margin: 0.2rem 0 0;
+}
+
+.oc-item-price {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #111;
+    white-space: nowrap;
+}
+
+/* Summary */
+.oc-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.oc-sum-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+.oc-sum-row.discount span:last-child {
+    color: #10b981;
+    font-weight: 600;
+}
+
+.oc-sum-row.total {
+    font-size: 1.05rem;
+    color: #111;
+    font-weight: 600;
+}
+
+.oc-sum-row.total strong {
+    font-size: 1.15rem;
+    font-weight: 800;
+}
+
+.oc-sum-divider {
+    height: 1px;
+    background: #f0f0f0;
+    margin: 0.4rem 0;
+}
+
+/* Delivery */
+.oc-delivery {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    font-size: 0.9rem;
+    color: #374151;
+}
+
+.oc-delivery p {
+    margin: 0;
+}
+
+/* Notes */
+.oc-note {
+    margin: 0 2rem 1.5rem;
+    padding: 1rem 1.25rem;
+    border-radius: 12px;
+    font-size: 0.88rem;
+}
+
+.oc-note strong {
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.oc-note-cod {
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    color: #92400e;
+}
+
+.oc-note p {
+    margin: 0;
+}
+
+/* Actions */
+.oc-actions {
+    display: flex;
+    gap: 0.75rem;
+    padding: 1.5rem 2rem;
+    flex-wrap: wrap;
+}
+
+.oc-btn-primary {
+    flex: 1;
+    text-align: center;
+    background: #111;
+    color: #fff;
+    padding: 0.85rem 1.5rem;
+    border-radius: 99px;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: var(--font-primary);
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+.oc-btn-primary:hover {
+    background: #333;
+}
+
+.oc-btn-outline {
+    flex: 1;
+    text-align: center;
+    border: 1.5px solid #e5e7eb;
+    color: #111;
+    padding: 0.85rem 1.5rem;
+    border-radius: 99px;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: var(--font-primary);
+    font-size: 0.9rem;
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.oc-btn-outline:hover {
+    border-color: #111;
+    background: #f9fafb;
+}
+
+@media (max-width: 480px) {
+    .oc-header {
+        padding: 2rem 1.25rem 1.5rem;
+    }
+
+    .oc-section {
+        padding: 1.25rem;
+    }
+
+    .oc-note {
+        margin: 0 1.25rem 1.25rem;
+    }
+
+    .oc-actions {
+        padding: 1.25rem;
+        flex-direction: column;
+    }
+}

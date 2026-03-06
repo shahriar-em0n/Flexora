@@ -1,0 +1,32 @@
+/* Customer List page — layout overrides */
+.customer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Top section: narrow left col + wide chart */
+.cl-top-grid {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 16px;
+    align-items: start;
+}
+
+@media (max-width: 1024px) {
+    .cl-top-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Left column: 3 stacked stat cards */
+.cl-stat-col {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* Overview chart card takes remaining space */
+.cl-overview-card {
+    min-height: 0;
+}

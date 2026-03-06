@@ -1,0 +1,6 @@
+/* Sidebar styles are in index.css (global design system).
+   Only micro-overrides belong here. */
+
+.sidebar__group {
+    margin-bottom: 4px;
+}

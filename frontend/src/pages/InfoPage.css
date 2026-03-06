@@ -1,0 +1,337 @@
+/* ===== INFO PAGES (About, Privacy, Terms, etc.) ===== */
+.info-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+}
+
+.info-page main {
+    flex: 1;
+}
+
+/* ── Breadcrumb ── */
+.info-breadcrumb {
+    padding: 1rem 2rem;
+    font-size: 0.82rem;
+    color: #888;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.info-breadcrumb a {
+    color: #888;
+    text-decoration: none;
+}
+
+.info-breadcrumb a:hover {
+    color: #000;
+}
+
+.info-breadcrumb span {
+    margin: 0 0.4rem;
+}
+
+/* ── Hero Banner ── */
+.info-hero {
+    background: #000;
+    color: #fff;
+    padding: 4rem 2rem 3.5rem;
+    text-align: center;
+}
+
+.info-hero h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    margin: 0 0 0.75rem;
+}
+
+.info-hero p {
+    font-size: 1.05rem;
+    color: #ccc;
+    max-width: 540px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* ── Content container ── */
+.info-content {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 3rem 2rem 5rem;
+}
+
+/* ── Sections ── */
+.info-section {
+    margin-bottom: 3rem;
+}
+
+.info-section h2 {
+    font-size: 1.35rem;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.9rem;
+    color: #111;
+}
+
+.info-section h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin: 1.5rem 0 0.5rem;
+    color: #222;
+}
+
+.info-section p {
+    color: #555;
+    line-height: 1.75;
+    margin-bottom: 0.8rem;
+}
+
+.info-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0.8rem;
+}
+
+.info-section ul li {
+    color: #555;
+    padding: 0.4rem 0 0.4rem 1.2rem;
+    position: relative;
+    line-height: 1.65;
+}
+
+.info-section ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #000;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+/* ── Stat / highlight cards ── */
+.info-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.25rem;
+    margin: 2rem 0;
+}
+
+.info-stat-card {
+    background: #f7f7f7;
+    border-radius: 12px;
+    padding: 1.5rem 1.25rem;
+    text-align: center;
+}
+
+.info-stat-card .stat-num {
+    font-size: 2rem;
+    font-weight: 900;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.info-stat-card .stat-label {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* ── Team / Card Grid ── */
+.info-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.25rem;
+    margin: 1.5rem 0;
+}
+
+.info-card {
+    background: #f7f7f7;
+    border-radius: 14px;
+    padding: 1.5rem 1.25rem;
+}
+
+.info-card h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem;
+}
+
+.info-card p {
+    font-size: 0.88rem;
+    color: #666;
+    margin: 0;
+    line-height: 1.55;
+}
+
+.info-card .card-tag {
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    border-radius: 20px;
+    padding: 0.25rem 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+/* ── CTA box ── */
+.info-cta-box {
+    background: #000;
+    color: #fff;
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    margin: 3rem 0 0;
+}
+
+.info-cta-box h3 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.info-cta-box p {
+    color: #ccc;
+    margin-bottom: 1.5rem;
+}
+
+.info-cta-box a {
+    display: inline-block;
+    background: #fff;
+    color: #000;
+    font-weight: 700;
+    border-radius: 40px;
+    padding: 0.75rem 2rem;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: opacity 0.15s;
+}
+
+.info-cta-box a:hover {
+    opacity: 0.85;
+}
+
+/* ── Accordion (FAQ) ── */
+.faq-item {
+    border-bottom: 1px solid #e8e8e8;
+    padding: 1.1rem 0;
+}
+
+.faq-item summary {
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.faq-item summary::after {
+    content: '+';
+    font-size: 1.2rem;
+    color: #888;
+    transition: transform 0.2s;
+}
+
+details[open] .faq-item summary::after {
+    content: '−';
+}
+
+.faq-item p {
+    margin: 0.75rem 0 0;
+    color: #666;
+    line-height: 1.7;
+}
+
+/* ── Contact form ── */
+.info-form {
+    background: #f7f7f7;
+    border-radius: 16px;
+    padding: 2rem;
+    margin: 1.5rem 0;
+}
+
+.info-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.info-form-row.full {
+    grid-template-columns: 1fr;
+}
+
+.info-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.info-form-group label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.info-form-group input,
+.info-form-group textarea,
+.info-form-group select {
+    border: 1.5px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 0.7rem 1rem;
+    font-size: 0.9rem;
+    font-family: inherit;
+    outline: none;
+    background: #fff;
+    transition: border-color 0.15s;
+}
+
+.info-form-group input:focus,
+.info-form-group textarea:focus,
+.info-form-group select:focus {
+    border-color: #000;
+}
+
+.info-form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.info-form-submit {
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 40px;
+    padding: 0.8rem 2rem;
+    font-weight: 700;
+    font-size: 0.95rem;
+    font-family: inherit;
+    cursor: pointer;
+    transition: opacity 0.15s;
+    margin-top: 0.5rem;
+}
+
+.info-form-submit:hover {
+    opacity: 0.85;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+    .info-hero {
+        padding: 2.5rem 1rem 2rem;
+    }
+
+    .info-content {
+        padding: 2rem 1rem 3rem;
+    }
+
+    .info-form-row {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,303 @@
+/* Add Product page */
+.ap-page {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Sub-header */
+.ap-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.ap-heading {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--admin-text);
+}
+
+/* Search inside sub-header */
+.ap-search {
+    position: relative;
+}
+
+.ap-search-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--admin-light);
+}
+
+.ap-search-input {
+    height: 36px;
+    padding: 0 12px 0 32px;
+    width: 200px;
+    border: 1px solid var(--admin-border);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    outline: none;
+    background: #fff;
+    color: var(--admin-text);
+}
+
+.ap-search-input:focus {
+    border-color: var(--green-400);
+}
+
+/* Button variants */
+.btn-green-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--green-600);
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background var(--dur-fast);
+}
+
+.btn-green-pill:hover:not(:disabled) {
+    background: var(--green-700);
+}
+
+.btn-green-pill:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.btn-outline-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #fff;
+    color: var(--admin-text);
+    border: 1px solid var(--admin-border);
+    border-radius: 20px;
+    padding: 8px 18px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: border-color var(--dur-fast);
+}
+
+.btn-outline-pill:hover:not(:disabled) {
+    border-color: var(--green-400);
+}
+
+.btn-outline-pill:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.btn-icon-circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid var(--admin-border);
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--admin-text);
+    transition: border-color var(--dur-fast);
+}
+
+.btn-icon-circle:hover {
+    border-color: var(--green-400);
+}
+
+/* Two-column grid */
+.ap-grid {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 20px;
+    align-items: start;
+}
+
+@media (max-width: 1100px) {
+    .ap-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Section card inner */
+.ap-section {
+    padding: 20px;
+}
+
+.ap-section-title {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--admin-text);
+}
+
+/* Textarea */
+.ap-textarea {
+    min-height: 100px;
+    resize: vertical;
+    padding-bottom: 36px;
+    font-family: inherit;
+}
+
+/* Image upload primary box */
+.ap-img-primary {
+    position: relative;
+    width: 100%;
+    min-height: 200px;
+    border: 2px dashed var(--admin-border);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: border-color var(--dur-fast);
+    background: var(--admin-bg);
+    cursor: pointer;
+}
+
+.ap-img-primary:hover {
+    border-color: var(--green-400);
+}
+
+.ap-img-preview {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    max-height: 220px;
+}
+
+.ap-img-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 24px;
+}
+
+.ap-img-remove {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 22px;
+    height: 22px;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* Thumbnail */
+.ap-thumb {
+    position: relative;
+    width: 56px;
+    height: 56px;
+    border-radius: 8px;
+    border: 1px solid var(--admin-border);
+    overflow: hidden;
+    flex-shrink: 0;
+    cursor: pointer;
+    background: var(--admin-bg);
+}
+
+.ap-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ap-thumb-remove {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 16px;
+    height: 16px;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 10px;
+}
+
+.ap-thumb-add {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed var(--green-300);
+    background: #f0fdf4;
+    gap: 2px;
+    cursor: pointer;
+}
+
+/* Browse / Replace buttons */
+.ap-img-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid var(--admin-border);
+    border-radius: 6px;
+    padding: 6px 14px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--admin-text);
+    background: #fff;
+    cursor: pointer;
+    transition: border-color var(--dur-fast);
+}
+
+.ap-img-btn:hover {
+    border-color: var(--green-400);
+}
+
+/* Toggle switch */
+.ap-toggle {
+    position: relative;
+    width: 40px;
+    height: 22px;
+    border-radius: 11px;
+    background: #d1d5db;
+    border: none;
+    cursor: pointer;
+    transition: background var(--dur-fast);
+    flex-shrink: 0;
+    padding: 0;
+}
+
+.ap-toggle--on {
+    background: var(--green-500);
+}
+
+.ap-toggle-thumb {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #fff;
+    transition: left var(--dur-fast);
+    display: block;
+}
+
+.ap-toggle--on .ap-toggle-thumb {
+    left: 21px;
+}

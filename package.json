@@ -1,0 +1,12 @@
+{
+  "name": "flexoraa",
+  "private": true,
+  "workspaces": ["frontend", "admin", "backend"],
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace=backend\" \"npm run dev --workspace=frontend\" \"npm run dev --workspace=admin\"",
+    "install:all": "npm install && npm install --workspace=frontend && npm install --workspace=admin && npm install --workspace=backend"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

@@ -1,0 +1,59 @@
+/* Order List page — layout overrides */
+.order-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* 4-column stat grid */
+.ol-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+@media (max-width: 1100px) {
+    .ol-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .ol-stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Pagination prev/next buttons */
+.ol-pg-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border: 1px solid var(--admin-border);
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--admin-muted);
+    background: #fff;
+    cursor: pointer;
+    transition: all var(--dur-fast);
+}
+
+.ol-pg-btn:hover:not(:disabled) {
+    border-color: var(--green-500);
+    color: var(--green-600);
+}
+
+.ol-pg-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* Bulk action bar */
+.order-list__bulk {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
